@@ -1,0 +1,6 @@
+rootProject.name = 'mzim2273-idde'
+
+include 'mzim2273-backend'
+include 'mzim2273-desktop'
+include 'mzim2273-web'
+include 'mzim2273-spring'

@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active: "jpa"  # Active profile can be "jpa"/"jdbc"/"in-memory"
+
+  # JPA Configuration
+  datasource:
+    url: "jdbc:mysql://localhost:3306/hiking"
+    username: "username"
+    password: "password"
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+  jackson:
+    serialization:
+      indent_output: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+# JDBC-specific profile configuration
+jdbc:
+  url: "jdbc:mysql://localhost:3306/hiking"
+  username: "username"
+  password: "password"
+  database: "hiking"
+  poolSize: 10
+
+# Logging configuration
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type:
+          descriptor: trace

@@ -1,0 +1,47 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+def deploymentName = 'mzim2273-web'
+def tomcatHome = System.getenv('CATALINA_HOME')
+
+task deploy(type: Copy, dependsOn: 'war') {
+    doFirst {
+        if (!tomcatHome) {
+            throw new InvalidUserDataException("Tomcat home (CATALINA_HOME) not set")
+        }
+    }
+    from war.archiveFile
+    rename { war.archiveFileName.get() }
+    into "${tomcatHome}/webapps"
+}
+
+task undeploy(type: Delete) {
+    doFirst {
+        if (!tomcatHome) {
+            throw new InvalidUserDataException("Tomcat home (CATALINA_HOME) not set")
+        }
+    }
+    delete "${tomcatHome}/webapps/${deploymentName}.war"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.18.1'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.18.1'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.7'
+    runtimeOnly group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.7'
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    runtimeOnly 'com.mysql:mysql-connector-j:9.1.0'
+    // Ensure your backend module dependency is correct
+    implementation project(':mzim2273-backend')
+}
+
+war {
+    archiveBaseName = 'mzim2273-web'
+}

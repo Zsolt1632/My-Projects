@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.0'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
+}
+
+repositories {
+    mavenCentral() // Use Maven Central repository
+}
+
+dependencies {
+    // Spring Boot dependencies
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter:3.4.0'
+    implementation group: 'org.springframework', name: 'spring-jdbc', version: '6.2.1'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.4.1'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+
+    // JPA dependencies
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.4.1'
+    //implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.1.0'
+
+    // HikariCP for connection pooling
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    runtimeOnly 'com.mysql:mysql-connector-j:9.1.0'
+    //runtimeOnly 'com.h2database:h2'
+    implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.1.0'
+
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.18.1'
+
+    // Lombok for reducing boilerplate code (compile only, no runtime overhead)
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    // Logging (SLF4J + Logback)
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+    runtimeOnly 'ch.qos.logback:logback-classic:1.4.12'
+}

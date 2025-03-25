@@ -1,0 +1,30 @@
+plugins {
+    id 'base' // Base plugin to allow tasks like clean
+}
+
+allprojects {
+    repositories {
+        mavenCentral() // Centralized dependency repository for all modules
+    }
+}
+
+subprojects {
+    if (project.name == 'mzim2273-spring') {
+        return
+    }
+    apply plugin: 'java' // Java plugin applied to all subprojects
+
+    apply from: "$rootDir/lint.gradle" // Include lint.gradle for static analysis tools
+
+    dependencies {
+        // Common dependencies across all modules
+        compileOnly 'org.projectlombok:lombok:1.18.34'
+        annotationProcessor 'org.projectlombok:lombok:1.18.34'
+        implementation 'org.slf4j:slf4j-api:2.0.16'
+        implementation 'org.slf4j:slf4j-simple:2.0.16'
+
+        // JUnit for testing
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    }
+}

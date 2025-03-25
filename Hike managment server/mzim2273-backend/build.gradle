@@ -1,0 +1,6 @@
+dependencies {
+    // Define backend-specific dependencies here
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+    runtimeOnly 'com.mysql:mysql-connector-j:9.1.0'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.18.1'
+}
