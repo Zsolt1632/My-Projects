@@ -1,0 +1,167 @@
+body {
+    background-image: url('hatter.jpg');
+    background-size: cover;
+    background-attachment:fixed;
+    background-repeat: repeat-x;
+    color: black;
+    /* Alap szövegszín */
+}
+
+.hatter {
+    background-image: ('dbz.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    color: black;
+}
+
+p {
+    color: black;
+    display: inline-block;
+    background-color: rgba(38, 0, 255, 0.1);
+}
+
+em {
+    color: black;
+    background-color: rgba(38, 0, 255, 0.1);
+}
+
+b {
+    color: blue;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Tablara valo valtoztatasok*/
+table {
+    border: 2px solid black;
+    background-color: black;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: white;
+}
+
+tr:nth-child(odd) td:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: lightgray;
+}
+
+nav>p {
+    color: red;
+    font-size: 1.2em;
+
+}
+
+.link1 {
+    background-color: none;
+    color: blue;
+    /* Kék linkek */
+    text-decoration: underline;
+    /* Aláhúzás a linkekhez */
+}
+
+.link1:hover {
+    color: crimson;
+}
+
+.link1:visited {
+    color: white;
+}
+
+.link1:visited:hover {
+    color: crimson;
+}
+
+.link2 {
+    background-color: none;
+    color: blue;
+    /* Kék linkek */
+    text-decoration: underline;
+    /* Aláhúzás a linkekhez */
+}
+
+.link2:hover {
+    color:darkolivegreen;
+}
+
+.link2:visited {
+    color:darkgoldenrod;
+}
+
+.link2:visited:hover {
+    color: darkolivegreen;
+}
+
+div {
+    width: 90%;
+    height: auto;
+    border: 3px dashed darksalmon;
+    padding-right: 20px;
+    margin: 5px;
+}
+
+#felezes:hover {
+    width: 45%;
+}
+
+h2.header2_1 {
+    color: darkred;
+    background-color: aquamarine;
+    box-shadow: 5px 5px 20px greenyellow;
+    text-decoration: wavy;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+h2.header2_2 {
+    color: azure;
+    background-color: darkblue;
+    box-shadow: 5px 5px 20px blue;
+    text-decoration: dotted;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+}
+
+#felezes {
+    transition: width 2s;
+}
+
+.general_style {
+    font-size: 25px;
+    color: firebrick;
+    background-color: coral;
+    box-shadow: 5px 5px 15px orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+
+.red-border {
+    border-color: red;
+}
+
+.blue-border {
+    border-color: blue;
+}
+
+.green-border {
+    border-color: green;
+}
+
+.yellow-border {
+    border-color: yellow;
+}
+
+.orange-border {
+    border-color: orange;
+}
+
+.purple-border {
+    border-color: purple;
+}

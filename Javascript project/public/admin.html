@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <button type="button" onclick="location.href='fooldal.html'">Home page</button>
+        <button type="button" onclick="location.href='admin.html'">Add miovie</button>
+        <button type="button" onclick="location.href='review.html'">Viewer review</button>
+        <button type="button" onclick="location.href='filter.html'">Filter</button>
+    </nav>
+    <form action="/addFilm" id="movies" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Cím megadása" required>
+        <p>Release Year:</p>
+        <input type="number" min="1870" max="" name="releaseDate" id="yearInput" required>
+        <p>SUmmary:</p>
+        <textarea name="description" placeholder="A film rövid összefoglalása"></textarea>
+        <p>Genre: <input type="text" name="genre" placeholder="A film műfaja" required></p>
+        <p>COver Image: <input name="coverImageID" type="file" accept=".jpg, .png, .jpeg" required></p>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('yearInput').setAttribute('max', currentYear);
+    </script>
+</body>
+
+</html>

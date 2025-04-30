@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hatból négyet játék</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="player-info">
+        Játékos neve:
+        <input type="text" id="player-name">
+        Játékos életkora:
+        <input type="number" id="player-age" max="100">
+    </div>
+    <br>
+    <div class="game-board">
+        <label for="colors">Válassz egy-egy színt:</label>
+        <br>
+        <select class="color-selection">
+            <option value="">--</option>
+            <option value="piros">Piros</option>
+            <option value="kék">Kék</option>
+            <option value="zöld">Zöld</option>
+            <option value="sárga">Sárga</option>
+            <option value="narancs">Narancssárga</option>
+            <option value="lila">Lila</option>
+        </select>
+        <select class="color-selection">
+            <option value="">--</option>
+            <option value="piros">Piros</option>
+            <option value="kék">Kék</option>
+            <option value="zöld">Zöld</option>
+            <option value="sárga">Sárga</option>
+            <option value="narancs">Narancssárga</option>
+            <option value="lila">Lila</option>
+        </select>
+        <select class="color-selection">
+            <option value="">--</option>
+            <option value="piros">Piros</option>
+            <option value="kék">Kék</option>
+            <option value="zöld">Zöld</option>
+            <option value="sárga">Sárga</option>
+            <option value="narancs">Narancssárga</option>
+            <option value="lila">Lila</option>
+        </select>
+        <select class="color-selection">
+            <option value="">--</option>
+            <option value="piros">Piros</option>
+            <option value="kék">Kék</option>
+            <option value="zöld">Zöld</option>
+            <option value="sárga">Sárga</option>
+            <option value="narancs">Narancssárga</option>
+            <option value="lila">Lila</option>
+        </select>
+        <button type="button" id="myButton">Beküldés</button>
+    </div>
+    <canvas id="canvas" width="200" height="50"></canvas>
+    <div id="message"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

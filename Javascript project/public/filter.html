@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and Filter Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <button type="button" onclick="location.href='fooldal.html'">Home page</button>
+        <button type="button" onclick="location.href='admin.html'">Add a movie</button>
+        <button type="button" onclick="location.href='review.html'">Viewer review</button>
+        <button type="button" onclick="location.href='filter.html'">Filter</button>
+    </nav>
+
+    <h1>Search and Filter Movies</h1>
+    <form action="/search" id="movieSearchForm" method="post">
+        <input type="text" name="title" placeholder="Partial Title">
+        <input type="text" name="genre" placeholder="Genre">
+        <input type="number" name="minYear" placeholder="Min Year" min="1870" max="">
+        <input type="number" name="maxYear" placeholder="Max Year" min="1870" max="">
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="results"></div>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('yearInput').setAttribute('max', currentYear);
+    </script>
+</body>
+
+</html>

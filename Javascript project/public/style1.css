@@ -1,0 +1,27 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    background-image: url("bg.jpeg");
+    color: azure;
+}
+
+nav button {
+    background-image: url("buton_bg.jpg");
+    border: double;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-image: url("button_hover.jpg");
+    color: azure;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <button type="button" onclick="location.href='fooldal.html'">Home page</button>
+        <button type="button" onclick="location.href='admin.html'">Add a movie</button>
+        <button type="button" onclick="location.href='review.html'">Viewer review</button>
+        <button type="button" onclick="location.href='filter.html'">Filter</button>
+    </nav>
+    <h1>Add Review for a Movie</h1>
+    <form action="/addReview" id="movies" method="post" enctype="multipart/form-data">
+        <p>Movie ID: <input type="text" name="filmId" placeholder="Film ID" required></p>
+        <p>Rating: <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required></p>
+        <p>Your comment: <textarea name="comment" placeholder="Your comment"></textarea></p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
